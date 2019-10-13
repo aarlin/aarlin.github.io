@@ -1,39 +1,59 @@
+'use strict'
+
 module.exports = {
   siteMetadata: {
-    style: `light`,
-    layout: `sidebar`
+    title: 'gatsby-starter-typescript-plus',
+    description: 'A starter kit for TypeScript-based Gatsby projects with sensible defaults.',
+    keywords: 'gatsbyjs, gatsby, javascript, sample, something',
+    siteUrl: 'https://github.com/aarlin/aarlin.github.io',
+    author: {
+      name: 'Aaron Lin',
+      url: 'https://github.com/aarlin/aarlin.github.io',
+    }
   },
-  pathPrefix: process.env.PATH_PREFIX || "/",
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sass`,	
-    `gatsby-plugin-styled-components`,	  
-    `gatsby-transformer-yaml`,
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `yaml`,
-        path: `${__dirname}/src/data`
-      },
+        name: 'content',
+        path: `${__dirname}/src/content`
+      }
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-transformer-remark',
       options: {
-        name: `markdown-pages`,
-        path: `${__dirname}/src/data/posts`
-      },
+        plugins: [
+          {
+            resolve: 'gatsby-remark-responsive-iframe',
+            options: {
+              wrapperStyle: 'margin-bottom: 1rem'
+            }
+          },
+          'gatsby-remark-prismjs',
+          'gatsby-remark-copy-linked-files',
+          'gatsby-remark-smartypants',
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 1140,
+              quality: 90,
+              linkImagesToOriginal: false
+            }
+          }
+        ]
+      }
     },
-    `gatsby-transformer-remark`,
+    'gatsby-transformer-json',
     {
-      resolve: "gatsby-source-graphql",
+      resolve: 'gatsby-plugin-canonical-urls',
       options: {
-        typeName: "GitHub",
-        fieldName: "github",
-        url: "https://api.github.com/graphql",
-        headers: {
-          Authorization: `bearer ${process.env.GITHUB_TOKEN}`,
-        }
-      },
+        siteUrl: 'https://gatsby-starter-typescript-plus.netlify.com'
+      }
     },
-  ],
+    'gatsby-plugin-emotion',
+    'gatsby-plugin-typescript',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-react-helmet'
+  ]
 }
