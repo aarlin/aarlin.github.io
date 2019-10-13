@@ -1,5 +1,3 @@
-
-
 module.exports = {
   siteMetadata: {
     title: 'aarlin.github.io',
@@ -47,7 +45,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-canonical-urls',
       options: {
-        siteUrl: 'https://gatsby-starter-typescript-plus.netlify.com'
+        siteUrl: 'https://aarlin.github.io/'
       }
     },
     'gatsby-plugin-emotion',

@@ -1,3 +1,11 @@
 /*******************************
      User Global Variables
 *******************************/
+
+/*-------------------
+       Fonts
+--------------------*/
+
+@headerFont        : 'Noto Sans JP', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+@pageFont          : 'Noto Sans JP', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+@googleFontName    : 'Noto Sans JP';
