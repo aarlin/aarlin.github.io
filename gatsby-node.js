@@ -36,24 +36,14 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   }
 }
 
-exports.onCreateWebpackConfig = ({ stage, rules, loaders, plugins, actions }) => {
+exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
     resolve: {
-      alias: {
-        '../../theme.config$': path.join(__dirname, 'semantic/theme.config')
-      }
-    },
-    module: {
-      rules: [
-        {
-          test: /\.less$/,
-          use: [loaders.miniCssExtract(), loaders.css({ importLoaders: 1 }), loaders.postcss(), `less-loader`]
-        }
-      ]
-    },
-    plugins: []
+      alias: { '../../theme.config$': path.join(__dirname, 'src/semantic/theme.config') }
+    }
   })
 }
+
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
