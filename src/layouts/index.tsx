@@ -4,6 +4,7 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import 'modern-normalize'
 import '../styles/normalize'
+import 'semantic-ui-less/semantic.less'
 
 import Header from '../components/Header'
 import LayoutRoot from '../components/LayoutRoot'

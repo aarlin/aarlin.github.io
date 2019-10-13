@@ -1,14 +1,14 @@
-'use strict'
+
 
 module.exports = {
   siteMetadata: {
-    title: 'gatsby-starter-typescript-plus',
+    title: 'aarlin.github.io',
     description: 'A starter kit for TypeScript-based Gatsby projects with sensible defaults.',
     keywords: 'gatsbyjs, gatsby, javascript, sample, something',
     siteUrl: 'https://github.com/aarlin/aarlin.github.io',
     author: {
       name: 'Aaron Lin',
-      url: 'https://github.com/aarlin/aarlin.github.io',
+      url: 'https://github.com/aarlin/aarlin.github.io'
     }
   },
   plugins: [
@@ -54,6 +54,7 @@ module.exports = {
     'gatsby-plugin-typescript',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-    'gatsby-plugin-react-helmet'
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-less'
   ]
 }

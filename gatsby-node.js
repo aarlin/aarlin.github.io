@@ -1,4 +1,4 @@
-'use strict'
+
 
 const path = require('path')
 
@@ -36,6 +36,14 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       })
     }
   }
+}
+
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      alias: { '../../theme.config$': path.join(__dirname, 'src/semantic/theme.config') }
+    }
+  })
 }
 
 exports.createPages = async ({ graphql, actions }) => {
