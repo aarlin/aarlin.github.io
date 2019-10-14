@@ -8,6 +8,7 @@ import IndexLayout from '../layouts'
 import ButtonExampleCircularSocial from '../components/ButtonExampleCircularSocial'
 import ServiceMessage from '../components/ServiceMessage'
 import BorderedImage from '../components/BorderedImage'
+import DividerLabel from '../components/DividerLabel'
 
 const IndexPage = () => (
   <IndexLayout>
@@ -16,6 +17,9 @@ const IndexPage = () => (
         <ServiceMessage />
         <BorderedImage />
         <Link to="/page-2/">Go to page 2</Link>
+        <DividerLabel label="Projects" />
+        <DividerLabel label="Experience" />
+        <DividerLabel label="Blogs" />
         <ButtonExampleSocial />
         <ButtonExampleCircularSocial />
       </Container>

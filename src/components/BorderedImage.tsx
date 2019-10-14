@@ -32,7 +32,7 @@ const BorderedImage: React.SFC<BorderedImageProps> = ({ className }) => {
   return (
     <>
       {/* <Img fluid={data.file.childImageSharp.fluid} /> */}
-      <Image className={className} src={data.file.publicURL} size="medium" bordered />
+      <Image className={className} src={data.file.publicURL} size="medium" bordered rounded />
     </>
   )
 }

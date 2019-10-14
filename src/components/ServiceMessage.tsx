@@ -4,7 +4,7 @@ import { Message } from 'semantic-ui-react'
 const ServiceMessage = () => (
   <Message>
     <Message.Header>Work in Progress</Message.Header>
-    <p>We updated our privacy policy here to better service our customers. We recommend reviewing the changes.</p>
+    <p>Currently working on making this page.</p>
   </Message>
 )
 
