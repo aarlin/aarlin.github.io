@@ -6,13 +6,13 @@ const ButtonExampleSocial = () => (
     <Button color="facebook">
       <Icon name="facebook" /> Facebook
     </Button>
-    <Button color="linkedin">
+    <Button>
       <Icon name="linkedin" /> LinkedIn
     </Button>
     <Button color="linkedin">
       <Icon name="linkedin" />
     </Button>
-    <Button color="github">
+    <Button>
       <Icon name="github" /> Github
     </Button>
   </div>
