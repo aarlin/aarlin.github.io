@@ -9,6 +9,7 @@ import 'semantic-ui-less/semantic.less'
 import Header from '../components/Header'
 import LayoutRoot from '../components/LayoutRoot'
 import LayoutMain from '../components/LayoutMain'
+import PortfolioHeader from '../components/PortfolioHeader'
 
 interface StaticQueryProps {
   site: {

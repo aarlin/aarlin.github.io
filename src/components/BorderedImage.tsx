@@ -2,6 +2,7 @@ import React from 'react'
 import { Image, Card, Icon } from 'semantic-ui-react'
 import Img from 'gatsby-image'
 import { graphql, useStaticQuery } from 'gatsby'
+import SocialMediaButtons from './SocialMediaButtons'
 
 interface BorderedImageProps {
   className?: string
@@ -36,7 +37,7 @@ const BorderedImage: React.SFC<BorderedImageProps> = ({ className }) => {
         <Card.Content>
           <Card.Header>Aaron Lin</Card.Header>
           <Card.Meta>
-            <span className="job-title">Associate Software Engineer</span>
+            <span className="job-title">Associate Software Engineer @ Fidelity</span>
           </Card.Meta>
           <Card.Description></Card.Description>
         </Card.Content>
