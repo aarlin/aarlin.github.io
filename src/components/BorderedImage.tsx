@@ -32,7 +32,7 @@ const BorderedImage: React.SFC<BorderedImageProps> = ({ className }) => {
 
   return (
     <>
-      <Card>
+      <Card centered>
         <Image className={className} src={data.file.publicURL} size="medium" rounded bordered wrapped ui={false} />
         <Card.Content>
           <Card.Header>Aaron Lin</Card.Header>

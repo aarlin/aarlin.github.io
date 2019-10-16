@@ -1,15 +1,21 @@
 import * as React from 'react'
 import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
+import { StaticQuery, graphql, Link } from 'gatsby'
 
 import 'modern-normalize'
 import '../styles/normalize'
 import 'semantic-ui-less/semantic.less'
 
+import { Container, Grid } from 'semantic-ui-react'
 import Header from '../components/Header'
 import LayoutRoot from '../components/LayoutRoot'
 import LayoutMain from '../components/LayoutMain'
 import PortfolioHeader from '../components/PortfolioHeader'
+import Page from '../components/Page'
+import ServiceMessage from '../components/ServiceMessage'
+import BorderedImage from '../components/BorderedImage'
+import SectionBrowser from '../components/SectionBrowser'
+import SocialMediaButtons from '../components/SocialMediaButtons'
 
 interface StaticQueryProps {
   site: {
@@ -42,7 +48,32 @@ const IndexLayout: React.FC = ({ children }) => (
             { name: 'keywords', content: data.site.siteMetadata.keywords }
           ]}
         />
-        <LayoutMain>{children}</LayoutMain>
+        <LayoutMain>
+          <Page>
+            <Container fluid>
+              <ServiceMessage />
+              <Grid stackable>
+                <Grid.Row>
+                  <Grid.Column width={3}>
+                    <BorderedImage />
+                  </Grid.Column>
+                  <Grid.Column width={13}>
+                    <SectionBrowser children={children} />
+                    <Grid.Row></Grid.Row>
+                  </Grid.Column>
+                </Grid.Row>
+                <Grid.Row>
+                  <Grid.Column width={3}>
+                    <SocialMediaButtons />
+                  </Grid.Column>
+                </Grid.Row>
+                <Grid.Row width={3}></Grid.Row>
+              </Grid>
+
+              <Link to="/page-2/">Go to page 2</Link>
+            </Container>
+          </Page>
+        </LayoutMain>
       </LayoutRoot>
     )}
   />

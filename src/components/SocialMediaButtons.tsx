@@ -5,7 +5,7 @@ import { Link } from '@reach/router'
 const SocialMediaButtons = () => (
   // TODO: Add mouseover icon to turn blue
   <>
-    <ButtonGroup widths="3" basic size="medium">
+    <ButtonGroup widths="4" basic size="medium">
       <Popup
         content="LinkedIn"
         key="linkedin"
@@ -49,6 +49,20 @@ const SocialMediaButtons = () => (
             </Button.Content>
             <Button.Content hidden>
               <Icon name="envelope open" />
+            </Button.Content>
+          </Button>
+        }
+      />
+
+      <Popup
+        content="Resume"
+        key="resume"
+        size="mini"
+        position="bottom center"
+        trigger={
+          <Button>
+            <Button.Content visible>
+              <Icon name="file alternate" />
             </Button.Content>
           </Button>
         }
