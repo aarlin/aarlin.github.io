@@ -4,6 +4,7 @@ import { Link } from '@reach/router'
 
 const SocialMediaButtons = () => (
   // TODO: Add mouseover icon to turn blue
+  // TODO: Turn into horizontal buttons if mobile
   <>
     <ButtonGroup widths="4" basic size="medium">
       <Popup
@@ -60,7 +61,7 @@ const SocialMediaButtons = () => (
         size="mini"
         position="bottom center"
         trigger={
-          <Button>
+          <Button animated="fade">
             <Button.Content visible>
               <Icon name="file alternate" />
             </Button.Content>

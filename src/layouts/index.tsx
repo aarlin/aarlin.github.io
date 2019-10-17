@@ -58,8 +58,7 @@ const IndexLayout: React.FC = ({ children }) => (
                     <BorderedImage />
                   </Grid.Column>
                   <Grid.Column width={13}>
-                    <SectionBrowser children={children} />
-                    <Grid.Row></Grid.Row>
+                    <SectionBrowser>{children}</SectionBrowser>
                   </Grid.Column>
                 </Grid.Row>
                 <Grid.Row>
@@ -69,8 +68,6 @@ const IndexLayout: React.FC = ({ children }) => (
                 </Grid.Row>
                 <Grid.Row width={3}></Grid.Row>
               </Grid>
-
-              <Link to="/page-2/">Go to page 2</Link>
             </Container>
           </Page>
         </LayoutMain>

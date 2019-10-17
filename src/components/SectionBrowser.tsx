@@ -1,38 +1,19 @@
-import React, { Component, Children } from 'react'
-import { Input, Menu, Segment } from 'semantic-ui-react'
-import { Link } from '@reach/router'
+import React from 'react'
+import { Menu, Segment } from 'semantic-ui-react'
+import { NavLink, BrowserRouter } from 'react-router-dom'
 
-interface SectionBrowserState {
-  activeItem: string
+const SectionBrowser: React.FC = ({ children }) => {
+  return (
+    <BrowserRouter>
+      <Menu attached="top" tabular>
+        <Menu.Item as={NavLink} exact to="/about" name="about" />
+        <Menu.Item as={NavLink} to="/projects" name="projects" />
+        <Menu.Item as={NavLink} to="/blog" name="blog" />
+      </Menu>
+
+      <Segment attached="bottom">{children}</Segment>
+    </BrowserRouter>
+  )
 }
 
-export default class SectionBrowser extends Component<{}, SectionBrowserState> {
-  public constructor(props) {
-    super(props)
-    this.state = {
-      activeItem: 'about'
-    }
-  }
-
-  public handleItemClick = (e, { name }) => this.setState({ activeItem: name })
-
-  public render() {
-    return (
-      <>
-        <Menu attached="top" tabular>
-          <Menu.Item as={Link} to="/about" name="about" active={this.state.activeItem === 'about'} onClick={this.handleItemClick} />
-          <Menu.Item
-            as={Link}
-            to="/projects"
-            name="projects"
-            active={this.state.activeItem === 'projects'}
-            onClick={this.handleItemClick}
-          />
-          <Menu.Item as={Link} to="/blog" name="blog" active={this.state.activeItem === 'blog'} onClick={this.handleItemClick} />
-        </Menu>
-
-        <Segment attached="bottom">{this.props.children}</Segment>
-      </>
-    )
-  }
-}
+export default SectionBrowser
