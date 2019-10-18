@@ -16,6 +16,8 @@ import ServiceMessage from '../components/ServiceMessage'
 import BorderedImage from '../components/BorderedImage'
 import SectionBrowser from '../components/SectionBrowser'
 import SocialMediaButtons from '../components/SocialMediaButtons'
+import TechnicalSkills from '../components/TechnicalSkills'
+import Education from '../components/Education'
 
 interface StaticQueryProps {
   site: {
@@ -56,15 +58,16 @@ const IndexLayout: React.FC = ({ children }) => (
                 <Grid.Row>
                   <Grid.Column width={3}>
                     <BorderedImage />
+                    <SocialMediaButtons />
+                    <TechnicalSkills />
+                    <Education />
                   </Grid.Column>
                   <Grid.Column width={13}>
                     <SectionBrowser>{children}</SectionBrowser>
                   </Grid.Column>
                 </Grid.Row>
                 <Grid.Row>
-                  <Grid.Column width={3}>
-                    <SocialMediaButtons />
-                  </Grid.Column>
+                  <Grid.Column width={3}></Grid.Column>
                 </Grid.Row>
                 <Grid.Row width={3}></Grid.Row>
               </Grid>

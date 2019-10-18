@@ -1,8 +1,9 @@
 import React from 'react'
 import { Button, ButtonGroup, Icon, Popup } from 'semantic-ui-react'
-import { Link } from '@reach/router'
+import { Link } from 'gatsby'
 
 const SocialMediaButtons = () => (
+  
   // TODO: Add mouseover icon to turn blue
   // TODO: Turn into horizontal buttons if mobile
   <>
@@ -13,7 +14,7 @@ const SocialMediaButtons = () => (
         size="mini"
         position="bottom center"
         trigger={
-          <Button as={Link} to="https://www.linkedin.com/in/aaron-lin-44123a15a/">
+          <Button as="a" to="https://www.linkedin.com/in/aaron-lin-44123a15a/">
             <Button.Content visible>
               <Icon name="linkedin" />
             </Button.Content>
@@ -27,7 +28,7 @@ const SocialMediaButtons = () => (
         size="mini"
         position="bottom center"
         trigger={
-          <Button as={Link} to="https://github.com/aarlin" animated="fade">
+          <Button as="a" to="https://github.com/aarlin" animated="fade">
             <Button.Content hidden>
               <Icon name="github" />
             </Button.Content>

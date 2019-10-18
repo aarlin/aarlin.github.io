@@ -1,5 +1,6 @@
 import React from 'react'
 import IndexLayout from '../layouts'
+import { Link } from 'gatsby'
 
 const About = () => (
   <IndexLayout>

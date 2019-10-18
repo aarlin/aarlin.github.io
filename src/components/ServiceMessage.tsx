@@ -2,10 +2,11 @@ import React from 'react'
 import { Message } from 'semantic-ui-react'
 
 const ServiceMessage = () => (
-  <Message>
-    <Message.Header>Work in Progress</Message.Header>
-    <p>Currently working on making this page.</p>
-  </Message>
+  <Message
+    icon="exclamation triangle"
+    header="Have you heard about our mailing list?"
+    content="Get the best news in your e-mail every day."
+  />
 )
 
 export default ServiceMessage

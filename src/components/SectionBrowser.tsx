@@ -1,20 +1,19 @@
 import React from 'react'
-import { Menu, Segment } from 'semantic-ui-react'
-import { NavLink, BrowserRouter } from 'react-router-dom'
+import { Menu, Segment, Container, Header } from 'semantic-ui-react'
 import { Link } from 'gatsby'
 
 const SectionBrowser: React.FC = ({ children }) => {
   return (
     <>
-      <BrowserRouter>
-        <Menu attached="top" tabular>
-          <Menu.Item as={Link} activeClassName="active" to="/" name="about" />
-          <Menu.Item as={Link} activeClassName="active" to="/projects" name="projects" />
-          <Menu.Item as={Link} activeClassName="active" to="/blog" name="blog" />
-        </Menu>
-      </BrowserRouter>
+      <Menu attached="top" tabular>
+        <Menu.Item as={Link} activeClassName="active" to="/" name="about" />
+        <Menu.Item as={Link} activeClassName="active" to="/projects" name="projects" />
+        <Menu.Item as={Link} activeClassName="active" to="/blog" name="blog" />
+      </Menu>
 
-      <Segment attached="bottom">{children}</Segment>
+      <Segment raised attached="bottom">
+        {children}
+      </Segment>
     </>
   )
 }
