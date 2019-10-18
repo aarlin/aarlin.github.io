@@ -1,73 +1,56 @@
 import React from 'react'
-import { Button, ButtonGroup, Icon, Popup } from 'semantic-ui-react'
+import { Button, ButtonGroup, Icon, Popup, SemanticICONS } from 'semantic-ui-react'
 import { Link } from 'gatsby'
 
+const socialMedia: { content: string; key: string; to: string; icon: SemanticICONS }[] = [
+  {
+    content: 'LinkedIn',
+    key: 'linkedin',
+    to: 'https://www.linkedin.com/in/aaron-lin-44123a15a/',
+    icon: 'linkedin'
+  },
+  {
+    content: 'GitHub',
+    key: 'github',
+    to: 'https://github.com/aarlin',
+    icon: 'github'
+  },
+  {
+    content: 'Mail',
+    key: 'mail',
+    to: 'mailto:aaronlin256@gmail.com',
+    icon: 'mail'
+  },
+  {
+    content: 'Resume',
+    key: 'resume',
+    to: '/aaron_lin.pdf',
+    icon: 'file alternate'
+  }
+]
+
 const SocialMediaButtons = () => (
-  
   // TODO: Add mouseover icon to turn blue
   // TODO: Turn into horizontal buttons if mobile
   <>
     <ButtonGroup widths="4" basic size="medium">
-      <Popup
-        content="LinkedIn"
-        key="linkedin"
-        size="mini"
-        position="bottom center"
-        trigger={
-          <Button as="a" to="https://www.linkedin.com/in/aaron-lin-44123a15a/">
-            <Button.Content visible>
-              <Icon name="linkedin" />
-            </Button.Content>
-          </Button>
-        }
-      />
-
-      <Popup
-        content="GitHub"
-        key="github"
-        size="mini"
-        position="bottom center"
-        trigger={
-          <Button as="a" to="https://github.com/aarlin" animated="fade">
-            <Button.Content hidden>
-              <Icon name="github" />
-            </Button.Content>
-            <Button.Content visible>
-              <Icon name="github alternate" />
-            </Button.Content>
-          </Button>
-        }
-      />
-
-      <Popup
-        content="Mail"
-        key="mail"
-        size="mini"
-        position="bottom center"
-        trigger={
-          <Button animated="fade">
-            <Button.Content visible>
-              <Icon name="envelope" />
-            </Button.Content>
-            <Button.Content hidden>
-              <Icon name="envelope open" />
-            </Button.Content>
-          </Button>
-        }
-      />
-
-      <Popup
-        content="Resume"
-        key="resume"
-        size="mini"
-        position="bottom center"
-        trigger={
-          <Button animated="fade">
-            <Button.Content visible>
-              <Icon name="file alternate" />
-            </Button.Content>
-          </Button>
-        }
+      {socialMedia.map(media => {
+        return (
+          <Popup
+            content={media.content}
+            key={media.key}
+            size="mini"
+            position="bottom center"
+            trigger={
+              <Button as="a" to={media.to}>
+                <Button.Content visible>
+                  <Icon name={media.icon} />
+                </Button.Content>
+              </Button>
+            }
+          />
+        )
+      })}
       />
     </ButtonGroup>
   </>
