@@ -1,8 +1,8 @@
 ---
 layout: page
-title: "My first blog post"
-path: "/about"
-date: "10-19-2019"
+title: 'Projects'
+path: '/projects'
+date: '10-19-2019'
 ---
 
 List of projects I have made

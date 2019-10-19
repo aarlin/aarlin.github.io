@@ -1,12 +1,24 @@
 import React from 'react'
+import { graphql } from 'gatsby'
+import { Header } from 'semantic-ui-react'
 import IndexLayout from '../layouts'
 
-const Projects = () => (
+export const projects = graphql`
+  query {
+    markdownRemark(frontmatter: { path: { eq: "/projects" } }) {
+      html
+      frontmatter {
+        path
+        title
+      }
+    }
+  }
+`
+
+const Projects = ({ data }) => (
   <IndexLayout>
-    <div style={{ color: `teal` }}>
-      <h1> Projects</h1>
-      <p>Such wow. Very React.</p>
-    </div>
+    <Header>{data.markdownRemark.frontmatter.title}</Header>
+    {data.markdownRemark.html}
   </IndexLayout>
 )
 
