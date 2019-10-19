@@ -1,6 +1,8 @@
 ---
 layout: page
 title: 'Example Markdown page'
+path: '/content/a-markdown-page'
+date: '2019-05-05'
 ---
 
 Now we're writing in Markdown! Pretty nice, huh?
