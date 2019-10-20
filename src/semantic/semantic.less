@@ -303,12 +303,18 @@
 @fa-youtube: #e52d27;
 
 .icon {
+  /* Overrides */
   &.mail {
-    color: @fa-internet-explorer;
+    color: @fa-git !important;
   }
   &.file.alternate {
-    color: @fa-slack;
+    color: @fa-git !important;
   }
+  &.linkedin {
+    color: @fa-git !important;
+  }
+  /* End of overrides */
+  
   &.fa-500px {
     color: @fa-500px;
   }
@@ -734,37 +740,5 @@
   }
   &.fa-youtube-square {
     color: @fa-youtube-square;
-  }
-}
-
-.tech-skills {
-  color: blue;
-  // background-color: #c5d2d8;
-  content: '';
-  height: 15px;
-  left: 100%;
-  position: absolute;
-  transform: translateY(-50%);
-  top: 50%;
-  width: 1px;
-
-  &:hover {
-    color: red;
-    content: 'Github'; //attr(data-tooltip);
-    line-height: 42px;
-    opacity: 0;
-    text-align: center;
-    transform: scale(0.75);
-    visibility: hidden;
-    z-index: 50;
-    transition: 0.25s;
-    font-size: 11px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
   }
 }
