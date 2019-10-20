@@ -1,8 +1,11 @@
 ---
 layout: page
 title: "My first blog post"
-path: "/post-1"
-date: "2019-05-04"
+path: "/blog/post-1"
+date: "10-19-2019"
+image: ''
+tags: ["javascript", "typescript", "react", "gatsby", "graphql"]
+key: "bbc20235f383911e534ab46fc65c1f83"
 ---
 
 First Post using Markdown

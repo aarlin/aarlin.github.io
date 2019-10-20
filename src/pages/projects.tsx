@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { Header } from 'semantic-ui-react'
 import IndexLayout from '../layouts'
 
 export const projects = graphql`
@@ -8,18 +7,17 @@ export const projects = graphql`
     markdownRemark(frontmatter: { path: { eq: "/projects" } }) {
       html
       frontmatter {
-        path
-        title
+        date
       }
     }
   }
 `
 
-const Projects = ({ data }) => (
+const ProjectsPage = ({ data }) => (
   <IndexLayout>
-    <Header>{data.markdownRemark.frontmatter.title}</Header>
-    {data.markdownRemark.html}
+    <div> Date Posted: {data.markdownRemark.frontmatter.date}</div>
+    <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
   </IndexLayout>
 )
 
-export default Projects
+export default ProjectsPage

@@ -13,8 +13,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'content',
-        path: `${__dirname}/src/content`
+        name: 'sections',
+        path: `${__dirname}/src/content/sections`
       }
     },
     {
@@ -22,6 +22,13 @@ module.exports = {
       options: {
         name: 'images',
         path: `${__dirname}/src/images`
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'blog',
+        path: `${__dirname}/src/content/blog`
       }
     },
     {
@@ -60,6 +67,13 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-less'
+    'gatsby-plugin-less',
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'aarlin.github.io',
+        icon: 'src/images/a-blue.png'
+      }
+    }
   ]
 }

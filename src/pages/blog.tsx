@@ -12,6 +12,7 @@ export const blogPosts = graphql`
           frontmatter {
             layout
             title
+            key
           }
           fields {
             slug
@@ -23,11 +24,11 @@ export const blogPosts = graphql`
   }
 `
 
-const Blog = ({ data }) => (
+const BlogPage = ({ data }) => (
   <IndexLayout>
     {data.allMarkdownRemark.edges.map(blogPost => {
       return (
-        <>
+        <React.Fragment key={blogPost.node.frontmatter.key}>
           <Segment padded vertical basic>
             <Header as="h4">{blogPost.node.frontmatter.title}</Header>
             Time to read: {blogPost.node.timeToRead} minute(s)
@@ -36,10 +37,10 @@ const Blog = ({ data }) => (
             Read more
           </Button>
           <Divider section />
-        </>
+        </React.Fragment>
       )
     })}
   </IndexLayout>
 )
 
-export default Blog
+export default BlogPage

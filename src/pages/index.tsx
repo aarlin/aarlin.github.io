@@ -18,7 +18,7 @@ export const about = graphql`
 const IndexPage = ({ data }) => (
   <IndexLayout>
     <Header>{data.markdownRemark.title}</Header>
-    {data.markdownRemark.html}
+    <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
   </IndexLayout>
 )
 

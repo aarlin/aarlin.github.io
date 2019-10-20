@@ -3,6 +3,10 @@ layout: page
 title: 'Example Markdown page'
 path: '/content/a-markdown-page'
 date: '2019-05-05'
+key: "2344289a3ccca067b57b0c62ed356cf6"
+attachments:
+  - "./assets.zip"
+  - "./presentation.pdf"
 ---
 
 Now we're writing in Markdown! Pretty nice, huh?
