@@ -14,7 +14,6 @@ import ServiceMessage from '../components/ServiceMessage'
 import BorderedImage from '../components/BorderedImage'
 import SectionBrowser from '../components/SectionBrowser'
 import SocialMediaButtons from '../components/SocialMediaButtons'
-import TechnicalSkills from '../components/TechnicalSkills'
 import Education from '../components/Education'
 
 interface StaticQueryProps {
@@ -57,7 +56,6 @@ const IndexLayout: React.FC = ({ children }) => (
                   <Grid.Column width={3}>
                     <BorderedImage />
                     <SocialMediaButtons />
-                    <TechnicalSkills />
                     <Education />
                   </Grid.Column>
                   <Grid.Column width={13}>

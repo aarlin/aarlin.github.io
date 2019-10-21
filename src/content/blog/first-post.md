@@ -1,8 +1,9 @@
 ---
 layout: page
-title: "My first blog post"
-path: "/blog/post-1"
+title: "My First Blog Post"
+path: "/blog/first-post"
 date: "10-19-2019"
+contentType: blog
 image: ''
 tags: ["javascript", "typescript", "react", "gatsby", "graphql"]
 key: "bbc20235f383911e534ab46fc65c1f83"

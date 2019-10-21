@@ -6,9 +6,8 @@ const SectionBrowser: React.FC = ({ children }) => {
   return (
     <>
       <Menu attached="top" tabular>
-        <Menu.Item as={Link} activeClassName="active" exact="true" to="/" name="about" />
-        <Menu.Item as={Link} activeClassName="active" exact="true" to="/projects" name="projects" />
-        <Menu.Item as={Link} activeClassName="active" exact="true" to="/blog" name="blog" />
+        <Menu.Item as={Link} activeClassName="active" exact="true" to="/" name="blog" />
+        <Menu.Item as={Link} activeClassName="active" exact="true" to="/about" name="about" />
       </Menu>
 
       <Segment raised attached="bottom">
