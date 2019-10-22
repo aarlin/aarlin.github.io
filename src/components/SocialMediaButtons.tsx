@@ -48,9 +48,7 @@ const SocialMediaButtons = () => (
             position="bottom center"
             trigger={
               <Button as={media.as} to={media.to}>
-                <Button.Content visible>
-                  <Icon className={media.style} name={media.icon} />
-                </Button.Content>
+                <Icon className={media.style} name={media.icon} />
               </Button>
             }
           />
@@ -67,10 +65,8 @@ const SocialMediaButtons = () => (
             size="mini"
             position="right center"
             trigger={
-              <Button positive as={media.as} to={media.to}>
-                <Button.Content visible>
-                  <Icon className={media.style} name={media.icon} />
-                </Button.Content>
+              <Button as="a" href={media.to}>
+                <Icon className={media.style} name={media.icon} />
               </Button>
             }
           />
@@ -88,9 +84,7 @@ const SocialMediaButtons = () => (
             position="bottom center"
             trigger={
               <Button positive as={media.as} to={media.to}>
-                <Button.Content visible>
-                  <Icon className={media.style} name={media.icon} />
-                </Button.Content>
+                <Icon className={media.style} name={media.icon} />
               </Button>
             }
           />
