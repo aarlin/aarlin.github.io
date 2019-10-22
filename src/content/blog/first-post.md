@@ -4,7 +4,7 @@ title: "My First Blog Post"
 path: "/blog/first-post"
 date: "10-19-2019"
 contentType: blog
-image: ''
+images: '../images/hello_world.jpg'
 tags: ["javascript", "typescript", "react", "gatsby", "graphql"]
 key: "bbc20235f383911e534ab46fc65c1f83"
 ---

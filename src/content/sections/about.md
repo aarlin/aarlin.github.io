@@ -3,9 +3,12 @@ layout: page
 path: '/about'
 date: '10-19-2019'
 key: '70e1733efe56e20a6edcb96632119b4b'
+tags: ['javascript', 'typescript', 'react', 'gatsby', 'graphql']
 ---
 
-```Hello World!```
+```bash
+Hello World!
+```
 
 I studied Computer Science at Stony Brook University (Class of 2017).
 I've been working as an Associate Software Engineer at Fidelity since June 2018.
