@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import { Button, Segment, Divider, Header, Image } from 'semantic-ui-react'
+import { Button, Segment, Divider, Header, Image, Label, Icon } from 'semantic-ui-react'
 import IndexLayout from '../layouts'
+import { associateColor } from '../utilities/randomColor'
 
 export const blogPosts = graphql`
   {
@@ -37,23 +38,29 @@ export const blogPosts = graphql`
 const BlogPage = ({ data }) => (
   <IndexLayout>
     {data.allMarkdownRemark.edges.map(({ node }) => {
+      const { tags } = node.frontmatter
       return (
         <React.Fragment key={node.frontmatter.key}>
-          <Segment padded vertical basic>
+          <Segment basic compact>
             <Header as="h4">
               [{node.frontmatter.date}]: {node.frontmatter.title}
             </Header>
+            <Image src={node.frontmatter.images.childImageSharp.fluid.src} size="small" rounded floated="left" />
+            <p>{node.excerpt}</p>
+            <p>
+              {tags.map(tag => {
+                return (
+                  <Label basic color={associateColor(tag)}>
+                    {tag}
+                  </Label>
+                )
+              })}
+            </p>
+            <Button compact basic as={Link} to={node.fields.slug}>
+              <b>Continue Reading</b>
+              <Icon name="chevron right" />
+            </Button>
           </Segment>
-          <Image src={node.frontmatter.images.childImageSharp.fluid.src} size="small" />
-          <Segment basic compact>
-            Tags: {node.tags}
-          </Segment>
-          <Segment basic compact>
-            {node.excerpt}
-          </Segment>
-          <Button compact as={Link} to={node.fields.slug}>
-            Continue Reading
-          </Button>
           <Divider section />
         </React.Fragment>
       )
