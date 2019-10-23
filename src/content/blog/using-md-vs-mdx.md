@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 'Using MD vs MDX'
+description: 'What is the best choice? Should we even have code in our markdown files?'
 path: '/blog/using-md-vs-mdx'
 date: '10-19-2019'
 contentType: blog

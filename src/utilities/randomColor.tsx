@@ -9,7 +9,7 @@ interface TagMapping {
   [key: string]: string
 }
 
-export function associateColor(tag: string): SemanticCOLORS {
+export function associateColorToTag(tag: string): SemanticCOLORS {
   const associatedColorPerTag: TagMapping = {
     javascript: 'yellow',
     typescript: 'blue',

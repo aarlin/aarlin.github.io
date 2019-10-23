@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "My First Blog Post"
+description: 'My personal blog and what I want to contribute'
 path: "/blog/first-post"
 date: "10-19-2019"
 contentType: blog

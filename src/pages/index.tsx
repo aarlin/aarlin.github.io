@@ -2,16 +2,17 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import { Button, Segment, Divider, Header, Image, Label, Icon } from 'semantic-ui-react'
 import IndexLayout from '../layouts'
-import { associateColor } from '../utilities/randomColor'
+import { associateColorToTag } from '../utilities/randomColor'
 
 export const blogPosts = graphql`
   {
-    allMarkdownRemark(filter: { frontmatter: { contentType: { eq: "blog" } } }) {
+    allMarkdownRemark(filter: { frontmatter: { contentType: { eq: "blog" } } }, sort: { fields: frontmatter___date, order: DESC }) {
       edges {
         node {
           frontmatter {
             layout
             title
+            description
             key
             date
             tags
@@ -28,7 +29,6 @@ export const blogPosts = graphql`
           fields {
             slug
           }
-          excerpt(format: PLAIN)
         }
       }
     }
@@ -46,11 +46,11 @@ const BlogPage = ({ data }) => (
               [{node.frontmatter.date}]: {node.frontmatter.title}
             </Header>
             <Image src={node.frontmatter.images.childImageSharp.fluid.src} size="small" rounded floated="left" />
-            <p>{node.excerpt}</p>
+            <p>{node.frontmatter.description}</p>
             <p>
               {tags.map(tag => {
                 return (
-                  <Label basic color={associateColor(tag)}>
+                  <Label basic color={associateColorToTag(tag)}>
                     {tag}
                   </Label>
                 )
