@@ -15,7 +15,7 @@ I've been working as an Associate Software Engineer at Fidelity since June 2018.
 
 I have interest in building things that connect together - IoT, IFTTT, etc.
 
-Here are some of the projects I have made:
+Here are some of the projects I have made:  
 
 - [League of Legends Champion Cooldown](https://www.amazon.com/League-of-Legends-Champion-Cooldown/dp/B076FN3YS2/ref=sr_1_1?s=digital-skills&ie=UTF8&qid=1509574603&sr=1-1&keywords=league+of+legends+champion+cooldown&dpID=7137yMTCy7L&preST=_SY300_QL70_&dpSrc=srch)
 - [Alexa Watch Butler (WIP)](https://github.com/aarlin/alexa-watch-butler)

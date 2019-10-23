@@ -2,12 +2,12 @@ import React from 'react'
 import { Button, ButtonGroup, Icon, Popup, SemanticICONS, Responsive } from 'semantic-ui-react'
 import { Link } from 'gatsby'
 
-const socialMedia: { content: string; key: string; as: string; to: string; icon: SemanticICONS; style?: string }[] = [
+const socialMedia: { content: string; key: string; as: string; href: string; icon: SemanticICONS; style?: string }[] = [
   {
     content: 'LinkedIn',
     key: 'linkedin',
     as: 'a',
-    to: 'https://www.linkedin.com/in/aaron-lin-44123a15a/',
+    href: 'https://www.linkedin.com/in/aaron-lin-44123a15a/',
     icon: 'linkedin',
     style: 'fa-linkedin'
   },
@@ -15,7 +15,7 @@ const socialMedia: { content: string; key: string; as: string; to: string; icon:
     content: 'GitHub',
     key: 'github',
     as: 'a',
-    to: 'https://github.com/aarlin',
+    href: 'https://github.com/aarlin',
     icon: 'github',
     style: 'fa-git'
   },
@@ -23,14 +23,14 @@ const socialMedia: { content: string; key: string; as: string; to: string; icon:
     content: 'Mail',
     key: 'mail',
     as: 'a',
-    to: 'mailto:aaronlin256@gmail.com',
+    href: 'mailto:aaronlin256@gmail.com',
     icon: 'mail'
   },
   {
     content: 'Resume',
     key: 'resume',
     as: 'a',
-    to: '/aaron_lin.pdf',
+    href: '/aaron_lin.pdf',
     icon: 'file alternate'
   }
 ]
@@ -47,7 +47,7 @@ const SocialMediaButtons = () => (
             size="mini"
             position="bottom center"
             trigger={
-              <Button as={media.as} to={media.to}>
+              <Button as={media.as} href={media.href}>
                 <Icon className={media.style} name={media.icon} />
               </Button>
             }
@@ -65,7 +65,7 @@ const SocialMediaButtons = () => (
             size="mini"
             position="right center"
             trigger={
-              <Button as="a" href={media.to}>
+              <Button as="a" href={media.href}>
                 <Icon className={media.style} name={media.icon} />
               </Button>
             }
@@ -83,7 +83,7 @@ const SocialMediaButtons = () => (
             size="mini"
             position="bottom center"
             trigger={
-              <Button positive as={media.as} to={media.to}>
+              <Button as={media.as} href={media.href}>
                 <Icon className={media.style} name={media.icon} />
               </Button>
             }
