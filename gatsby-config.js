@@ -13,10 +13,26 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'content',
-        path: `${__dirname}/src/content`
+        name: 'sections',
+        path: `${__dirname}/src/content/sections`
       }
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: `${__dirname}/src/content/images`
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'blog',
+        path: `${__dirname}/src/content/blog`
+      }
+    },
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
@@ -34,8 +50,7 @@ module.exports = {
             resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 1140,
-              quality: 90,
-              linkImagesToOriginal: false
+              quality: 100
             }
           }
         ]
@@ -50,9 +65,15 @@ module.exports = {
     },
     'gatsby-plugin-emotion',
     'gatsby-plugin-typescript',
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-less'
+    'gatsby-plugin-less',
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'aarlin.github.io',
+        icon: 'src/content/images/a-blue.png'
+      }
+    },
+    'gatsby-plugin-offline'
   ]
 }

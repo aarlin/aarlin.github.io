@@ -1,15 +1,16 @@
 ---
 layout: page
-title: 'Example Markdown page'
-path: '/content/a-markdown-page'
-date: '2019-05-05'
-key: "2344289a3ccca067b57b0c62ed356cf6"
-attachments:
-  - "./assets.zip"
-  - "./presentation.pdf"
+title: "My First Blog Post"
+description: 'My personal blog and what I want to contribute'
+path: "/blog/first-post"
+date: "10-19-2019"
+contentType: blog
+images: '../images/hello_world.jpg'
+tags: ["javascript", "typescript", "react", "gatsby", "graphql"]
+key: "bbc20235f383911e534ab46fc65c1f83"
 ---
 
-Now we're writing in Markdown! Pretty nice, huh?
+First Post using Markdown
 
 This starter has out-of-the-box support for basic Markdown rendering. The `content/` directory is where you put all of your Markdown content in. Gatsby will build your pages out of it. Gatsby will also follow the directory structure of your files too, so when you store a page at e.g. `content/projects/large-hadron-collider.md`, it will be built in `/projects/large-hadron-collider/`.
 

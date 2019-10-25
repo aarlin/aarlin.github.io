@@ -1,10 +1,19 @@
 import React from 'react'
+import { graphql } from 'gatsby'
+import IndexLayout from '../layouts'
 
-const About = () => (
-  <div style={{ color: `teal` }}>
-    <h1> About Gatsby</h1>
-    <p>Such wow. Very React.</p>
-  </div>
+export const projects = graphql`
+  query {
+    markdownRemark(frontmatter: { path: { eq: "/about" } }) {
+      html
+    }
+  }
+`
+
+const ProjectsPage = ({ data }) => (
+  <IndexLayout>
+    <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+  </IndexLayout>
 )
 
-export default About
+export default ProjectsPage

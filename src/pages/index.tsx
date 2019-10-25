@@ -1,23 +1,71 @@
-import * as React from 'react'
-import { Link } from 'gatsby'
-
-import ButtonExampleSocial from '../components/ButtonExampleSocial';
-import Page from '../components/Page'
-import Container from '../components/Container'
+import React from 'react'
+import { Link, graphql } from 'gatsby'
+import { Button, Segment, Divider, Header, Image, Label, Icon } from 'semantic-ui-react'
 import IndexLayout from '../layouts'
+import { associateColorToTag } from '../utilities/randomColor'
 
-const IndexPage = () => (
+export const blogPosts = graphql`
+  {
+    allMarkdownRemark(filter: { frontmatter: { contentType: { eq: "blog" } } }, sort: { fields: frontmatter___date, order: DESC }) {
+      edges {
+        node {
+          frontmatter {
+            layout
+            title
+            description
+            key
+            date
+            tags
+            path
+            contentType
+            images {
+              childImageSharp {
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+          fields {
+            slug
+          }
+        }
+      }
+    }
+  }
+`
+
+const BlogPage = ({ data }) => (
   <IndexLayout>
-    <Page>
-      <Container>
-        <h1>Personal Website</h1>
-        <p>Welcome to your new Gatsby site.</p>
-        <p>Now go build something great.</p>
-        <Link to="/page-2/">Go to page 2</Link>
-        <ButtonExampleSocial/>
-      </Container>
-    </Page>
+    {data.allMarkdownRemark.edges.map(({ node }) => {
+      const { tags } = node.frontmatter
+      return (
+        <React.Fragment key={node.frontmatter.key}>
+          <Segment basic compact>
+            <Header as="h4">
+              [{node.frontmatter.date}]: {node.frontmatter.title}
+            </Header>
+            <Image src={node.frontmatter.images.childImageSharp.fluid.src} size="small" rounded floated="left" />
+            <p>{node.frontmatter.description}</p>
+            <p>
+              {tags.map(tag => {
+                return (
+                  <Label basic color={associateColorToTag(tag)}>
+                    {tag}
+                  </Label>
+                )
+              })}
+            </p>
+            <Button compact basic as={Link} to={node.fields.slug}>
+              <b>Continue Reading</b>
+              <Icon name="chevron right" />
+            </Button>
+          </Segment>
+          <Divider section />
+        </React.Fragment>
+      )
+    })}
   </IndexLayout>
 )
 
-export default IndexPage
+export default BlogPage
