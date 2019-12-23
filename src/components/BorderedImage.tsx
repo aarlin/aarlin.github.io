@@ -27,7 +27,7 @@ const BorderedImage: React.SFC<BorderedImageProps> = ({ className }) => {
         <Card.Content>
           <Card.Header>Aaron Lin</Card.Header>
           <Card.Meta>
-            <span className="job-title">Associate Software Engineer @ Fidelity</span>
+            <span className="job-title">Software Engineer @ Fidelity</span>
           </Card.Meta>
         </Card.Content>
       </Card>
