@@ -1,8 +1,6 @@
-# gatsby-starter-typescript-plus
+# aarlin.github.io
 
-> A starter kit for TypeScript-based Gatsby projects with sensible defaults.
-
-This is a starter kit for [Gatsby.js](https://www.gatsbyjs.org/) websites written in TypeScript. It includes the bare essentials for you to get started (styling, Markdown parsing, minimal toolset).
+Personal website built using Gatsby and Typescript
 
 ## Features
 
@@ -10,25 +8,13 @@ This is a starter kit for [Gatsby.js](https://www.gatsbyjs.org/) websites writte
 - ESLint (with custom ESLint rules)
 - Markdown rendering with Remark
 - Basic component structure
+- Semantic React UI
 - Styling with [emotion](https://emotion.sh/)
-
-## Geting started
-
-Install this starter (assuming you have `gatsby-cli` installed) by running the following command:
-
-```bash
-gatsby new project-name https://github.com/resir014/gatsby-starter-typescript-plus
-```
 
 ## Developing
 
-A nodejs >= 6.0.0 setup with [yarn](https://yarnpkg.com/) is recommended.
-
 ```bash
 # install dependencies
-yarn
-
-# ...or, for npm
 npm install
 
 # serve with hot reload at localhost:8000
@@ -37,22 +23,20 @@ npm start
 # build for production
 npm run build
 
-# build for production and push to gh-pages branch
+# build for production and push to master branch
 npm run deploy
 ```
 
-## Credits
+_Note: Code is pushed onto develop branch and served on GitHub with the master branch_
 
-Built with [Gatsby](https://www.gatsbyjs.org/) - the blazing-fast static site generator for [React](https://facebook.github.io/react/).
+## References for Deployment Fix
 
 <https://github.com/gatsbyjs/gatsby/issues/13120>
 <https://medium.com/@rosegraner/how-to-integrate-semantic-ui-react-and-gatsby-js-36e8eaeb022b>
 <https://blog.yohei.tokyo/2019/02/gatsbyjs-semantic-ui/>  
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/resir014/gatsby-starter-typescript-plus)
+## Credits
 
-## Deployment Fix
+Built with [Gatsby](https://www.gatsbyjs.org/) - the blazing-fast static site generator for [React](https://facebook.github.io/react/).
 
-<https://github.com/gatsbyjs/gatsby/issues/13120>
-<https://medium.com/@rosegraner/how-to-integrate-semantic-ui-react-and-gatsby-js-36e8eaeb022b>
-<https://blog.yohei.tokyo/2019/02/gatsbyjs-semantic-ui/>
+Built from starter project: https://github.com/resir014/gatsby-starter-typescript-plus
