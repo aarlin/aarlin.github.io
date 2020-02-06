@@ -45,7 +45,9 @@ npm run deploy
 
 Built with [Gatsby](https://www.gatsbyjs.org/) - the blazing-fast static site generator for [React](https://facebook.github.io/react/).
 
-## Deploy
+<https://github.com/gatsbyjs/gatsby/issues/13120>
+<https://medium.com/@rosegraner/how-to-integrate-semantic-ui-react-and-gatsby-js-36e8eaeb022b>
+<https://blog.yohei.tokyo/2019/02/gatsbyjs-semantic-ui/>  
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/resir014/gatsby-starter-typescript-plus)
 
