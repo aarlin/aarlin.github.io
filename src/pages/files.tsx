@@ -3,7 +3,6 @@ import { graphql } from 'gatsby'
 import LayoutIndex from '../layouts/index'
 
 export default ({ data }) => {
-  console.log(data)
   return (
     <LayoutIndex>
       <div>
