@@ -19,8 +19,8 @@ const socialMedia: { content: string; key: string; as: string; href: string; ico
     style: 'fa-git'
   },
   {
-    content: 'Mail',
-    key: 'mail',
+    content: 'Email',
+    key: 'email',
     as: 'a',
     href: 'mailto:aaronlin256@gmail.com',
     icon: 'mail'
@@ -55,7 +55,7 @@ const SocialMediaButtons = () => (
             size="mini"
             position="bottom center"
             trigger={
-              <Button as={media.as} href={media.href}>
+              <Button as={media.as} href={media.href} aria-label={media.key}>
                 <Icon className={media.style} name={media.icon} />
               </Button>
             }
@@ -73,7 +73,7 @@ const SocialMediaButtons = () => (
             size="mini"
             position="right center"
             trigger={
-              <Button as="a" href={media.href}>
+              <Button as="a" href={media.href} aria-label={media.key}>
                 <Icon className={media.style} name={media.icon} />
               </Button>
             }
@@ -91,7 +91,7 @@ const SocialMediaButtons = () => (
             size="mini"
             position="bottom center"
             trigger={
-              <Button as={media.as} href={media.href}>
+              <Button as={media.as} href={media.href} aria-label={media.key}>
                 <Icon className={media.style} name={media.icon} />
               </Button>
             }
