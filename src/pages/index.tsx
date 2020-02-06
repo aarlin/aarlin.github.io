@@ -1,71 +1,19 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
-import { Button, Segment, Divider, Header, Image, Label, Icon } from 'semantic-ui-react'
+import { graphql } from 'gatsby'
 import IndexLayout from '../layouts'
-import { associateColorToTag } from '../utilities/randomColor'
 
-export const blogPosts = graphql`
-  {
-    allMarkdownRemark(filter: { frontmatter: { contentType: { eq: "blog" } } }, sort: { fields: frontmatter___date, order: DESC }) {
-      edges {
-        node {
-          frontmatter {
-            layout
-            title
-            description
-            key
-            date
-            tags
-            path
-            contentType
-            images {
-              childImageSharp {
-                fluid(maxWidth: 800) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-          fields {
-            slug
-          }
-        }
-      }
+export const projects = graphql`
+  query {
+    markdownRemark(frontmatter: { path: { eq: "/about" } }) {
+      html
     }
   }
 `
 
-const BlogPage = ({ data }) => (
+const ProjectsPage = ({ data }) => (
   <IndexLayout>
-    {data.allMarkdownRemark.edges.map(({ node }) => {
-      const { tags } = node.frontmatter
-      return (
-        <React.Fragment key={node.frontmatter.key}>
-          <Segment basic compact>
-            <Header as="h4">
-              [{node.frontmatter.date}]: {node.frontmatter.title}
-            </Header>
-            <Image src={node.frontmatter.images.childImageSharp.fluid.src} size="small" rounded floated="left" />
-            <p>{node.frontmatter.description}</p>
-            <p>
-              {tags.map(tag => {
-                return (
-                  <Label basic color={associateColorToTag(tag)}>
-                    {tag}
-                  </Label>
-                )
-              })}
-            </p>
-            <Button compact basic as={Link} to={node.fields.slug}>
-              <b>Continue Reading</b>
-              <Icon name="chevron right" />
-            </Button>
-          </Segment>
-          <Divider section />
-        </React.Fragment>
-      )
-    })}
+    <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
   </IndexLayout>
 )
 
-export default BlogPage
+export default ProjectsPage

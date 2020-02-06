@@ -24,19 +24,19 @@ module.exports = {
         path: `${__dirname}/src/content/images`
       }
     },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'blog',
-        path: `${__dirname}/src/content/blog`
-      }
-    },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+          'gatsby-remark-relative-images',
+          // {
+          //   resolve: 'gatsby-remark-normalize-paths',
+          //   options: {
+          //     pathFields: ['images']
+          //   }
+          // },
           {
             resolve: 'gatsby-remark-responsive-iframe',
             options: {
