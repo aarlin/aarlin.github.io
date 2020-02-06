@@ -1,6 +1,5 @@
 import React from 'react'
 import { Button, ButtonGroup, Icon, Popup, SemanticICONS, Responsive } from 'semantic-ui-react'
-import { Link } from 'gatsby'
 
 const socialMedia: { content: string; key: string; as: string; href: string; icon: SemanticICONS; style?: string }[] = [
   {
@@ -30,7 +29,8 @@ const socialMedia: { content: string; key: string; as: string; href: string; ico
     content: 'Resume',
     key: 'resume',
     as: 'a',
-    href: 'https://raw.githubusercontent.com/aarlin/aarlin.github.io/87e0e9a898fcdafb9c78aeca63f7779bc7baf37a/src/content/aaronlin_resume.pdf',
+    href:
+      'https://raw.githubusercontent.com/aarlin/aarlin.github.io/87e0e9a898fcdafb9c78aeca63f7779bc7baf37a/src/content/aaronlin_resume.pdf',
     icon: 'file alternate'
   },
   {
@@ -38,14 +38,15 @@ const socialMedia: { content: string; key: string; as: string; href: string; ico
     key: 'blog',
     as: 'a',
     href: 'https://aarlin.netlify.com',
-    icon: 'edit'
+    icon: 'edit',
+    style: 'fa-git'
   }
 ]
 
 const SocialMediaButtons = () => (
   // TODO: Add mouseover icon to turn blue
   <>
-    <Responsive as={ButtonGroup} maxWidth={765} widths="4" basic size="medium">
+    <Responsive as={ButtonGroup} maxWidth={765} widths="5" basic size="medium">
       {socialMedia.map(media => {
         return (
           <Popup
@@ -63,7 +64,7 @@ const SocialMediaButtons = () => (
       })}
     </Responsive>
 
-    <Responsive as={ButtonGroup} minWidth={766} maxWidth={1539} vertical widths="4" basic size="medium">
+    <Responsive as={ButtonGroup} minWidth={766} maxWidth={1539} vertical widths="5" basic size="medium">
       {socialMedia.map(media => {
         return (
           <Popup
@@ -81,7 +82,7 @@ const SocialMediaButtons = () => (
       })}
     </Responsive>
 
-    <Responsive as={ButtonGroup} minWidth={1540} widths="4" basic size="medium">
+    <Responsive as={ButtonGroup} minWidth={1540} widths="5" basic size="medium">
       {socialMedia.map(media => {
         return (
           <Popup
