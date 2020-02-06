@@ -32,6 +32,13 @@ const socialMedia: { content: string; key: string; as: string; href: string; ico
     as: 'a',
     href: '/aaron_lin.pdf',
     icon: 'file alternate'
+  },
+  {
+    content: 'Blog',
+    key: 'blog',
+    as: 'a',
+    href: 'https://aarlin.netlify.com',
+    icon: 'edit'
   }
 ]
 
