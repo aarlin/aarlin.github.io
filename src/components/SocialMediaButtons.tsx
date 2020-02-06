@@ -32,6 +32,13 @@ const socialMedia: { content: string; key: string; as: string; href: string; ico
     as: 'a',
     href: 'https://raw.githubusercontent.com/aarlin/aarlin.github.io/87e0e9a898fcdafb9c78aeca63f7779bc7baf37a/src/content/aaronlin_resume.pdf',
     icon: 'file alternate'
+  },
+  {
+    content: 'Blog',
+    key: 'blog',
+    as: 'a',
+    href: 'https://aarlin.netlify.com',
+    icon: 'edit'
   }
 ]
 
