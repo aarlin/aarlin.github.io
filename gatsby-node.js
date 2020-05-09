@@ -47,7 +47,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
 }
 
 exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions
+  const { createPage, createRedirect } = actions
   createRedirect({
     fromPath: 'https://aarlin.github.io/*',
     toPath: 'https://aarlin.netlify.app/:splat',
