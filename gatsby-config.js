@@ -74,6 +74,7 @@ module.exports = {
         icon: 'src/content/images/a-blue.png'
       }
     },
-    'gatsby-plugin-offline'
+    'gatsby-plugin-offline',
+    'gatsby-plugin-meta-redirect'
   ]
 }

@@ -10,7 +10,6 @@ import { Container, Grid } from 'semantic-ui-react'
 import LayoutRoot from '../components/LayoutRoot'
 import LayoutMain from '../components/LayoutMain'
 import Page from '../components/Page'
-import ServiceMessage from '../components/ServiceMessage'
 import BorderedImage from '../components/BorderedImage'
 import SectionBrowser from '../components/SectionBrowser'
 import SocialMediaButtons from '../components/SocialMediaButtons'
@@ -50,7 +49,6 @@ const IndexLayout: React.FC = ({ children }) => (
         <LayoutMain>
           <Page>
             <Container fluid>
-              <ServiceMessage />
               <Grid stackable>
                 <Grid.Row>
                   <Grid.Column width={3}>

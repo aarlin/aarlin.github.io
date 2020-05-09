@@ -5,7 +5,7 @@ date: '10-19-2019'
 key: '70e1733efe56e20a6edcb96632119b4b'
 ---
 
-```
+```bash
 Hello World!
 ```
 

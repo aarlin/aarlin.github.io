@@ -33,7 +33,7 @@ _Note: Code is pushed onto develop branch and served on GitHub with the master b
 
 <https://github.com/gatsbyjs/gatsby/issues/13120>\
 <https://medium.com/@rosegraner/how-to-integrate-semantic-ui-react-and-gatsby-js-36e8eaeb022b>\
-<https://blog.yohei.tokyo/2019/02/gatsbyjs-semantic-ui/>\
+<https://blog.yohei.tokyo/2019/02/gatsbyjs-semantic-ui/>
 
 ## Credits
 
